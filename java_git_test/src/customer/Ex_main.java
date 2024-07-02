@@ -6,38 +6,27 @@ public class Ex_main {
 		// TODO Auto-generated method stub
 
 		
-		String customerId;
-		String customerName;
-		String customerGrade;
-		int customerPoint;
-		double customerRatio;
-		
-		public Customer() {
-			customerGrade = "SILVER";
-			customerRatio = 0.01;
-		}
-		
-		public calcRatio(int price) {
-			customerPoint += price * customerRatio;
-		}
-		
-		public String customerInfo() {
-			String result = "";
-			
-			result += "[고객 아이디] : " + customerId + "\n";
-			result += "[고객 이름] : " + customerName + "\n";
-			result += "[고객 등급] : " + customerGrade + "\n";
-			result += "[고객 포인트] : " + customerPoint + "\n";
-			result += "[고객 포인트1] : " + customerRatio + "\n";
-			return result;
-		}
-		
-	    Customers customerLee = new Customers();
-	    customerLee.setCustomerId("mem_lee");
-	    customerLee.setCustomerName("Lee");
-	    
-	    System.out.println(customerLee.customerInfo());
-	    System.out.println(customerLee.calcRatio(10000));
+		// 일반 고객
+				Customers customerLee = new Customers();
+				customerLee.setCustomerId("mem_lee");
+				customerLee.setCustomerName("Lee");
+				
+				System.out.println(customerLee.customerInfo());
+				System.out.println(customerLee.calcRatio(10000));
+				
+				// VIP 고객
+				VIPCustomer customerKim = new VIPCustomer();
+				customerKim.setCustomerId("mem_kim");
+				customerKim.setCustomerName("KIM");
+				
+				System.out.println(customerKim.customerInfo());
+				
+				// VIP 고객
+				Customers customerPark = new VIPCustomer();
+				customerPark.setCustomerId("mem_park");
+				customerPark.setCustomerName("Park");
+				
+				System.out.println(customerPark.customerInfo());
 		
 	}
 
